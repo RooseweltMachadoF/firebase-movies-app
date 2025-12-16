@@ -20,7 +20,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget> with NavigatorM
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((_) async{
       
-      await Future.delayed(const Duration(seconds: 10));
+      await Future.delayed(const Duration(seconds: 2));
       final user = FirebaseAuthService.getUser;
 
       if(context.mounted){

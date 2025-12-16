@@ -9,8 +9,8 @@ final makeApiRepository = Provider<IApiRepositories>(
     Dio(
       BaseOptions(
         baseUrl: DotEnvServices.getApiBaseUrl,
-        connectTimeout: Duration(seconds: 10),
-        receiveTimeout: Duration(seconds: 10),
+        connectTimeout: Duration(seconds: 180),
+        receiveTimeout: Duration(seconds: 180),
         ),
     ),
     ));
