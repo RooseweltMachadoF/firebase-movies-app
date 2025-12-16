@@ -23,7 +23,7 @@ class MovieModel {
       title: map['title'] as String,
       imagePath: map['poster_path'] as String,
       overView: map['overview'] as String, 
-      releaseDate: DateTime.parse(map['releaseDate'] as String) , 
+      releaseDate: DateTime.parse(map['release_date'] as String) , 
       voteAverage: map['vote_average'] as num, 
       videoId: map['videoKey']);
   }

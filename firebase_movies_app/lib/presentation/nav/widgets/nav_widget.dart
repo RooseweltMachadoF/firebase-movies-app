@@ -8,6 +8,7 @@ import 'package:firebase_movies_app/core/services/video_player/i_video_player.da
 import 'package:firebase_movies_app/core/widgets/texts/text_widget.dart';
 import 'package:firebase_movies_app/presentation/login/screens/login_screen.dart';
 import 'package:firebase_movies_app/presentation/nav/controllers/nav_controller.dart';
+import 'package:firebase_movies_app/presentation/nav/widgets/movies/movies_widget.dart';
 import 'package:firebase_movies_app/presentation/nav/widgets/nav_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -43,7 +44,7 @@ class _NavWidgetState extends State<NavWidget> with NavigatorMixin{
       listen: false,
     );
     if(navCtrl.navIndex == 0){
-      videoPlayer..getController.unMute()..play();
+      videoPlayer..getController?.unMute()..play();
     }else{
       videoPlayer..mute()..pause();
     }
@@ -78,7 +79,7 @@ class _NavWidgetState extends State<NavWidget> with NavigatorMixin{
             child: Stack(
               children: [
                 Center(
-                  child: Text("Movies", style: TextStyle(color: Colors.white)),
+                  child: MoviesWidget(),
                 ),
                 if (navCtrl.navIndex == 1)
                   Center(

@@ -1,5 +1,5 @@
 abstract class IVideoPlayer<T> {
-  T get getController;
+  T? get getController;
 
   Future<void> play();
   Future<void> pause();

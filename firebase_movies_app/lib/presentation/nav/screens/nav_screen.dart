@@ -1,5 +1,4 @@
 import 'package:firebase_movies_app/core/factories/video_player_factory.dart';
-import 'package:firebase_movies_app/core/services/firebase/firebase_auth/firebase_auth_service.dart';
 import 'package:firebase_movies_app/core/services/firebase/firebase_store/firebase_store_service.dart';
 import 'package:firebase_movies_app/presentation/nav/factories/movies_widget_controller_factory.dart';
 import 'package:firebase_movies_app/presentation/nav/factories/nav_controller_factory.dart';

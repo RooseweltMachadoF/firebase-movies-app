@@ -3,7 +3,9 @@ import 'package:firebase_movies_app/core/services/video_player/youtube_player/yo
 import 'package:provider/provider.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
-final makeVideoPlayer = Provider<IVideoPlayer<YoutubePlayerController>>(
-  create: (_) =>
-      YoutubePlayerImpl(youtubePlayerController: YoutubePlayerController()),
+final makeVideoPlayer =
+    Provider<IVideoPlayer<YoutubePlayerController>>(
+  create: (_) => YoutubePlayerImpl(),
+  // dispose: (_, player) => player.dispose(),
 );
+
