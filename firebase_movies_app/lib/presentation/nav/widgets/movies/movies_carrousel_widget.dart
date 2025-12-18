@@ -4,6 +4,7 @@ import 'package:firebase_movies_app/core/extensions/ui/media_query_extension.dar
 import 'package:firebase_movies_app/core/extensions/ui/sizes_extension.dart';
 import 'package:firebase_movies_app/core/services/video_player/i_video_player.dart';
 import 'package:firebase_movies_app/core/widgets/images/network_movies_image_widget.dart';
+import 'package:firebase_movies_app/presentation/movie_details/screens/movie_details_screen.dart';
 import 'package:firebase_movies_app/presentation/nav/controllers/nav_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -54,7 +55,7 @@ class MoviesCarrouselWidget extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Scaffold(),
+                          builder: (context) => MovieDetailsScreen(),
                           settings: RouteSettings(arguments: selectedMovie),
                         ),
                       );

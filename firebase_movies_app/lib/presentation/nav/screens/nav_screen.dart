@@ -1,5 +1,6 @@
 import 'package:firebase_movies_app/core/factories/video_player_factory.dart';
 import 'package:firebase_movies_app/core/services/firebase/firebase_store/firebase_store_service.dart';
+import 'package:firebase_movies_app/data/models/favorite_movie_model.dart';
 import 'package:firebase_movies_app/presentation/nav/factories/movies_widget_controller_factory.dart';
 import 'package:firebase_movies_app/presentation/nav/factories/nav_controller_factory.dart';
 import 'package:firebase_movies_app/presentation/nav/widgets/nav_widget.dart';
@@ -19,10 +20,10 @@ class NavScreen extends StatelessWidget {
         makeMoviesWidgetController,
         StreamProvider.value(
           value: FirebaseStoreService().getFavoriteMovies,
-          initialData: null,
+          initialData: const <FavoriteMovieModel>[],
         ),
       ],
-      child: NavWidget(),
+      child: const NavWidget(),
     );
   }
 }
