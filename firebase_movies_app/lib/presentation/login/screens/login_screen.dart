@@ -69,6 +69,7 @@ class _LoginScreenState extends State<LoginScreen> with LoginFocusNodeMixin , Lo
             child: SingleChildScrollView(
               child: Column(
                 children: [
+                  SizedBoxWidget.md(),
                   SizedBox(
                     width: 150,
                     height: 150,

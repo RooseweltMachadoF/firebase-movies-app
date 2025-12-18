@@ -8,6 +8,7 @@ import 'package:firebase_movies_app/core/services/video_player/i_video_player.da
 import 'package:firebase_movies_app/core/widgets/texts/text_widget.dart';
 import 'package:firebase_movies_app/presentation/login/screens/login_screen.dart';
 import 'package:firebase_movies_app/presentation/nav/controllers/nav_controller.dart';
+import 'package:firebase_movies_app/presentation/nav/widgets/favorites/favorites_widget.dart';
 import 'package:firebase_movies_app/presentation/nav/widgets/movies/movies_widget.dart';
 import 'package:firebase_movies_app/presentation/nav/widgets/nav_button_widget.dart';
 import 'package:flutter/material.dart';
@@ -82,12 +83,7 @@ class _NavWidgetState extends State<NavWidget> with NavigatorMixin{
                   child: MoviesWidget(),
                 ),
                 if (navCtrl.navIndex == 1)
-                  Center(
-                    child: Text(
-                      "Favorite Movies",
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
+                  FavoritesWidget(),
               ],
             ),
           ),

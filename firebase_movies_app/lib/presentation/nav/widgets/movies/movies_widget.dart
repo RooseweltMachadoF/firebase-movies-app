@@ -1,6 +1,6 @@
 import 'package:firebase_movies_app/core/mixins/loading_error_mixin.dart';
 import 'package:firebase_movies_app/core/services/video_player/i_video_player.dart';
-import 'package:firebase_movies_app/core/widgets/others/error_with_button_widget.dart';
+import 'package:firebase_movies_app/core/widgets/others/error_button/error_with_button_widget.dart';
 import 'package:firebase_movies_app/presentation/nav/controllers/movies_widget_controller.dart';
 import 'package:firebase_movies_app/presentation/nav/controllers/nav_controller.dart';
 import 'package:firebase_movies_app/presentation/nav/widgets/movies/movies_carrousel_widget.dart';
@@ -46,7 +46,7 @@ class _MoviesWidgetState extends State<MoviesWidget> with LoadingErrorMixin {
     setState(() {
       moviesWidgetCtrl.currentPage = _moviesCarouselCtrl.page ?? 0;
     });
-
+    navCtrl.movieList.removeWhere((item) => item.videoId == null);
     if (moviesWidgetCtrl.currentPage.round() == moviesWidgetCtrl.currentPage) {
       initVideo(
         videoId:
